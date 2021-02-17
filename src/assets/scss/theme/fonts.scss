@@ -1,0 +1,6 @@
+$arabicFont: "Cairo";
+
+@font-face {
+  font-family: $arabicFont;
+  src: url("assets/fonts/Cairo-Regular.ttf") format("opentype");
+}

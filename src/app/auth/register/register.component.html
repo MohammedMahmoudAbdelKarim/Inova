@@ -1,0 +1,151 @@
+<section id="register" class="wow fadeIn py-5">
+  <div class="container-fluid">
+    <div class="row w-100 mx-0">
+      <div class="col-md-8 card m-auto p-5">
+        <div class="row w-100 mx-0">
+          <div class="col-md-6 text-right px-3">
+            <form
+              [formGroup]="signupForm"
+              (ngSubmit)="submit(signupForm.value)"
+            >
+              <h3 class="font-weight-bold">انشاء حساب جديد</h3>
+              <div class="form-group mt-4">
+                <mat-form-field class="w-100" appearance="outline">
+                  <input
+                    matInput
+                    placeholder="الاسم بالكامل"
+                    formControlName="name"
+                    required
+                  />
+                  <mat-hint
+                    class="text-danger wow fadeIn"
+                    *ngIf="showValidationError(signupForm, 'name')"
+                  >
+                    {{ getFormValidationMessage(signupForm, "name") }}</mat-hint
+                  >
+                </mat-form-field>
+              </div>
+              <div class="form-group mt-4">
+                <mat-form-field class="w-100" appearance="outline">
+                  <input
+                    matInput
+                    placeholder="ادخل عنون البريد الالكترونى"
+                    formControlName="email"
+                    required
+                  />
+                  <mat-hint
+                    class="text-danger wow fadeIn"
+                    *ngIf="showValidationError(signupForm, 'email')"
+                  >
+                    {{
+                      getFormValidationMessage(signupForm, "email")
+                    }}</mat-hint
+                  >
+                </mat-form-field>
+              </div>
+              <div class="form-group mt-4">
+                <mat-form-field class="w-100" appearance="outline">
+                  <input
+                    matInput
+                    placeholder="رقم التليفون"
+                    formControlName="phone"
+                    required
+                    type="number"
+                  />
+                  <mat-hint
+                    class="text-danger wow fadeIn"
+                    *ngIf="showValidationError(signupForm, 'phone')"
+                  >
+                    {{
+                      getFormValidationMessage(signupForm, "phone")
+                    }}</mat-hint
+                  >
+                </mat-form-field>
+              </div>
+              <div class="form-group mt-4">
+                <mat-form-field class="w-100" appearance="outline">
+                  <input
+                    matInput
+                    type="password"
+                    placeholder="كلمة المرور"
+                    formControlName="password"
+                    required
+                    minlength="9"
+                  />
+                  <mat-hint
+                    class="text-danger wow fadeIn"
+                    *ngIf="showValidationError(signupForm, 'password')"
+                  >
+                    {{
+                      getFormValidationMessage(signupForm, "password")
+                    }}</mat-hint
+                  >
+                </mat-form-field>
+              </div>
+              <div class="form-group mt-4">
+                <mat-form-field class="w-100" appearance="outline">
+                  <input
+                    matInput
+                    [matDatepicker]="picker"
+                    placeholder="تاريخ الميلاد"
+                    formControlName="dob"
+                  />
+                  <mat-datepicker-toggle
+                    matSuffix
+                    [for]="picker"
+                  ></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+
+              <div class="w-100">
+                <button
+                  class="btn btn-primary w-100 text-white text-center"
+                  [disabled]="signupForm.invalid"
+                >
+                  انشاء حساب
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-6 text-center border-right">
+            <p>لديك حساب بالفعل</p>
+            <div class="form-group mt-4 w-100">
+              <button
+                class="btn btn-secondary w-100 mb-2"
+                routerLink="/auth/register"
+              >
+                تسجيل الدخول
+              </button>
+              <p>او</p>
+              <div class="d-flex align-items-center justify-content-center">
+                <a
+                  href="www.facebook.com"
+                  target="_blank"
+                  class="social-link facebook mx-2"
+                >
+                  <i class="text-white fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="www.facebook.com"
+                  target="_blank"
+                  class="social-link twitter mx-2"
+                >
+                  <i class="text-white fab fa-twitter"></i>
+                </a>
+                <a
+                  href="www.facebook.com"
+                  target="_blank"
+                  class="social-link google mx-2"
+                >
+                  <i class="text-white fab fa-google-plus-g"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

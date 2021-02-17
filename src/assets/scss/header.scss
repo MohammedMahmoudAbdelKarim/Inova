@@ -1,0 +1,25 @@
+header {
+  background: $white;
+  box-shadow: 1px 3px 25px #dddd;
+  ul {
+    li {
+      a {
+        color: #25263e;
+        padding: 5px 15px !important;
+        font-weight: 600;
+      }
+    }
+    .new-report {
+      background: $primary;
+      border-radius: 5px;
+      a {
+        color: $white !important;
+      }
+    }
+    .login-btn {
+      border: 1px solid $primary;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}

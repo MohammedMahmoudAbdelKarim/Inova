@@ -1,0 +1,78 @@
+// Variables
+@import "./theme/variables";
+
+// Buttons
+@import "./theme/buttons.scss";
+
+// Fonts
+@import "./theme/fonts.scss";
+
+// Bootstrap Theme
+@import "./theme/bootstrapTheme.scss";
+
+// Material Theme
+@import "./theme/materialTheme.scss";
+
+// Header Component
+@import "./header.scss";
+
+// Footer Component
+@import "./footer.scss";
+
+// Login
+@import "./login.scss";
+
+// Register
+@import "./register.scss";
+
+// Global Styles
+* {
+  font-family: $arabicFont;
+}
+body {
+  background-color: $body_bg;
+  font-size: 14px;
+  direction: rtl;
+}
+
+input[type="checkbox"] {
+  background-color: $secondary !important;
+}
+
+ul {
+  list-style: none;
+}
+
+// hiding arrows from number inputs
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// JUST FOR REFERENCE
+// Mobile
+@media (min-width: 320px) and (max-width: 425px) {
+}
+
+// Tablet
+@media (min-width: 426px) and (max-width: 768px) {
+}
+
+// Small Laptop
+@media (min-width: 769px) and (max-width: 1024px) {
+}
+
+// Large Laptop
+@media (min-width: 1025px) and (max-width: 1440px) {
+}
+
+// 4K
+@media (min-width: 1441px) and (max-width: 2560px) {
+}
